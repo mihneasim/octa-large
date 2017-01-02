@@ -68,7 +68,7 @@ function result = sublarge(n1,n2)
     %result.digits
 
     for x=[(n1.no_digits-n2.no_digits):-1:1]
-	temp=(n1.digits(x,1)-remember);
+	temp=(n1.digits(x)-remember);
 	remember=0;
 	if(temp<0)
 	    temp+=10;
