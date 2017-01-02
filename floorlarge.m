@@ -1,5 +1,5 @@
 %gets rid of decimals by floor operation
-function result = floor(x)
+function result = floorlarge(x)
     if (x.no_decimals == 0)
         result = x;
     else
