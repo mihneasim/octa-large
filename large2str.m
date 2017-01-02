@@ -3,9 +3,8 @@ function result = large2str(x)
 %returns string out of large number
     result = "";
     index = 0;
-    if (x.no_digits == 0)
+    if (x.no_digits - x.no_decimals == 0)
         result = "0";
-        return;
     endif
     for i = x.digits'
         index++;
@@ -14,4 +13,7 @@ function result = large2str(x)
         endif
         result = strcat(result, num2str(i));
     endfor
+    if (x.no_digits > 0 && x.sign == 1)
+        result = strcat("-", result);
+    endif
 endfunction
