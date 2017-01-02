@@ -1,6 +1,11 @@
 %Mihnea Simian, mesimian.com
 function result = sublarge(n1,n2)
     %n1 - n2, where n1,n2 - large integer numbers
+
+	% get rid of decimals; losing precision of course
+	n1 = floorlarge(n1);
+	n2 = floorlarge(n2);
+
     if(n1.no_digits==0)
 	result=n2;
 	result.sign = 1-result.sign;
