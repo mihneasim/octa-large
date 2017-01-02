@@ -41,4 +41,5 @@ function result = largeroot(n)
 	result.digits = result.digits(1:result.no_digits);
     endif
     
+	result.digits = result.digits';
 endfunction
