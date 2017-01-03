@@ -14,9 +14,18 @@ function n = str2large(x)
     n.no_decimals = 0;
     n.no_digits = 0;
     n.digits = [];
+	reached_decimals = 0;
     while(pos <= length(x))
+		if (x(pos) == ".")
+			reached_decimals = 1;
+			pos++;
+			continue;
+		endif
 		n.digits = [n.digits; x(pos) - 48];
 		n.no_digits++;
+		if (reached_decimals == 1)
+			n.no_decimals++;
+		endif
 		pos++;
     endwhile
 endfunction
