@@ -6,6 +6,10 @@ function result = floorlarge(x)
         x.digits = x.digits(1:(x.no_digits - x.no_decimals));
         x.no_digits = x.no_digits - x.no_decimals;
         x.no_decimals = 0;
-        result = x;
+        if (x.sign == 1)
+            result = sublarge(x, mklarge(1));
+        else
+            result = x;
+        endif
     endif
 endfunction
