@@ -1,6 +1,10 @@
 %Mihnea Simian, mesimian.com
 function result = mulscalar(n1,d)
 %multiply large integer n1 by scalar d
+
+	% get rid of decimals; losing precision of course
+	n1 = floorlarge(n1);
+
     result.no_decimals=0;
     if(n1.no_digits==0 || d==0)
 	result=largezero;

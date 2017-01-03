@@ -2,6 +2,10 @@
 function result = largeroot(n)
 %computes square root out of a large integer positive number
 %2 decimals precision
+
+	% get rid of decimals; losing precision of course
+	n = floorlarge(n);
+
     if (mod(n.no_digits,2)==1)
 	n.no_digits+=1;
 	n.digits = [0; n.digits];

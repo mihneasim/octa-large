@@ -2,6 +2,11 @@
 function result = divlarge(n1,n2)
     %computes the division n1/n2 with 2 decimals
     %where n1, n2 large number integers
+
+	% get rid of decimals; losing precision of course
+	n1 = floorlarge(n1);
+	n2 = floorlarge(n2);
+
     result.sign = mod(n1.sign + n2.sign,2);
     n1.sign=0;
     n2.sign=0;

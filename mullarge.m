@@ -1,5 +1,10 @@
 %Mihnea Simian, mesimian.com
 function result = mullarge(n1, n2)
+
+	% get rid of decimals; losing precision of course
+	n1 = floorlarge(n1);
+	n2 = floorlarge(n2);
+
     result=largezero;
     if(n1.no_digits==0 || n2.no_digits==0)
 	return;

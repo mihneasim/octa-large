@@ -4,6 +4,11 @@ function result = comparelarge(n1,n2)
 %-1 n1 is smaller
 %0 n1 equals n2
 %1 n1 is larger
+
+	% get rid of decimals; losing precision of course
+	n1 = floorlarge(n1);
+	n2 = floorlarge(n2);
+
     if(n1.no_digits<n2.no_digits)
 	result=-1;
 	return;

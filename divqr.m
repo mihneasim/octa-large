@@ -2,6 +2,11 @@
 function [q r] = divqr(n1, n2)
 %computes quotient and remainder of the division n1/n2
 %where n1, n2 large number integers
+
+	% get rid of decimals; losing precision of course
+	n1 = floorlarge(n1);
+	n2 = floorlarge(n2);
+
     q=largezero;
     r=largezero;
     q.sign = mod(n1.sign + n2.sign,2);
