@@ -2,17 +2,13 @@
 function result = mulscalar(n1,d)
 %multiply large integer n1 by scalar d
 
-	% get rid of decimals; losing precision of course
-	n1 = floorlarge(n1);
-
-    result.no_decimals=0;
+    result.no_decimals=n1.no_decimals;
     if(n1.no_digits==0 || d==0)
 	result=largezero;
 	return;
     endif
 
     result.sign = n1.sign;
-    
     
     result.no_digits = n1.no_digits;
     overflow = 0;

@@ -15,7 +15,7 @@ function main
     f=fopen(infile,"r");
     [n1.no_digits n1.no_decimals n1.sign count] = fscanf(f,"%i %i %i","C");
     [n1.digits n1.no_digits] = fscanf(f,"%i",n1.no_digits);
-    [n2.no_digits n1.no_decimals n2.sign count] = fscanf(f,"%i %i %i","C");
+    [n2.no_digits n2.no_decimals n2.sign count] = fscanf(f,"%i %i %i","C");
     [n2.digits n2.no_digits] = fscanf(f,"%i",n2.no_digits);
     [digit count] = fscanf(f,"%i","C");
     fclose(f);
